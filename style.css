@@ -56,7 +56,10 @@ body {
   transform: scale(1.05);
 }
 
+/* Optional: active (current page) style */
 .menu-list-item.active {
+  background-color: #e50914;
+  color: white;
   font-weight: bold;
 }
 
@@ -70,6 +73,16 @@ body {
   transition: all 0.3s ease;
 }
 
+.profile-text-container {
+  margin: 0 20px;
+}
+
+/* Profile text hover */
+.profile-text {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
 /* Profile hover */
 .profile-container:hover {
   background-color: rgba(229, 9, 20, 0.1); /* soft red background */
@@ -77,29 +90,19 @@ body {
 }
 
 .profile-container:hover .profile-text {
-  color: #e50914; /* text changes to red */
+  color: #e50914; /* red text */
 }
 
-.profile-text-container {
-  margin: 0 20px;
-}
-
-.profile-text {
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-/* Profile picture hover */
 .profile-picture {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   object-fit: cover;
   transition: all 0.3s ease;
 }
 
 .profile-container:hover .profile-picture {
-  border: 2px solid #e50914; /* red border */
+  border: 2px solid #e50914;  /* red border */
   box-shadow: 0 0 10px rgba(229, 9, 20, 0.6); /* glowing effect */
 }
 
@@ -142,16 +145,16 @@ body {
 }
 
 .left-menu-icon {
+  color: white;
   font-size: 20px;
-  margin: 20px 0;
   cursor: pointer;
   transition: all 0.3s ease;
-  color: #bbb; /* default grey */
+  margin-bottom: 40px;
 }
 
 /* Hover effect */
 .left-menu-icon:hover {
-  color: #e50914; /* Netflix red highlight */
+  color: #e50914;   /* Netflix red highlight */
   transform: scale(1.2); /* make it pop */
 }
 
@@ -205,22 +208,17 @@ body {
   height: 300px;
   transform: translateX(0);
   transition: all 1s ease-in-out;
-  flex-wrap: wrap; /* ✅ allows wrapping on small screens */
-  justify-content: center; /* ✅ centers items */
 }
 
 .movie-list-item {
   margin-right: 30px;
   position: relative;
-  flex: 1 1 150px; /* ✅ responsive sizing */
-  max-width: 200px; /* ✅ prevent items from being too big */
 }
 
 .movie-list-item:hover .movie-list-item-img {
   transform: scale(1.2);
   margin: 0 30px;
   opacity: 0.5;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* subtle shadow */
 }
 
 .movie-list-item:hover .movie-list-item-title,
@@ -235,13 +233,6 @@ body {
   height: 200px;
   object-fit: cover;
   border-radius: 20px;
-}
-
-/* Hover effect */
-.movie-list-item-button:hover {
-  background-color: #b20710; /* darker red on hover */
-  transform: scale(1.1); /* button grows a bit */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* subtle shadow */
 }
 
 .movie-list-item-title {
@@ -283,6 +274,13 @@ body {
   transition: all 0.3s ease;
 }
 
+/* Hover effect */
+.movie-list-item-button:hover {
+  background-color: #b20710;   /* darker red on hover */
+  transform: scale(1.1);       /* button grows a bit */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* subtle shadow */
+}
+
 .arrow {
   font-size: 120px;
   position: absolute;
@@ -303,28 +301,29 @@ body {
 
 .navbar-container.active {
   background-color: white;
+
   color: black;
 }
 
-.sidebar.active {
-  background-color: white;
+.sidebar.active{
+    background-color: white;
 }
 
-.left-menu-icon.active {
-  color: black;
+.left-menu-icon.active{
+    color: black;
 }
 
-.toggle.active {
-  background-color: black;
+.toggle.active{
+    background-color: black;
 }
 
-.toggle-ball.active {
-  background-color: white;
-  transform: translateX(-20px);
+.toggle-ball.active{
+    background-color: white;
+    transform: translateX(-20px);
 }
 
-@media only screen and (max-width: 940px) {
-  .menu-container {
-    display: none;
-  }
+@media only screen and (max-width: 940px){
+    .menu-container{
+        display: none;
+    }
 }
