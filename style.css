@@ -204,11 +204,15 @@ body {
   height: 300px;
   transform: translateX(0);
   transition: all 1s ease-in-out;
+  flex-wrap: wrap; /* ✅ allows wrapping on small screens */
+  justify-content: center; /* ✅ centers items */
 }
 
 .movie-list-item {
   margin-right: 30px;
   position: relative;
+  flex: 1 1 150px;  /* ✅ responsive sizing */
+  max-width: 200px; /* ✅ prevent items from being too big */
 }
 
 .movie-list-item:hover .movie-list-item-img {
@@ -323,4 +327,51 @@ body {
     .menu-container{
         display: none;
     }
+}
+
+/* ✅ Responsive styles */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .sidebar {
+    display: none; /* hide sidebar on tablets/phones */
+  }
+  .featured-desc {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  .movie-list-item {
+    flex: 1 1 45%;  /* two per row */
+    max-width: 45%;
+  }
+  .movie-list-item-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-list-item {
+    flex: 1 1 100%;  /* one per row */
+    max-width: 100%;
+  }
+  .featured-title {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .featured-desc {
+    font-size: 0.8rem;
+  }
+  .movie-list-item-title {
+    font-size: 20px;
+  }
+  .movie-list-item-desc {
+    font-size: 12px;
+  }
+  .movie-list-item-button {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
 }
