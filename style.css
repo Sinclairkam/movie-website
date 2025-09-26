@@ -59,6 +59,7 @@ body {
 .menu-list-item.active {
   font-weight: bold;
 }
+
 .profile-container {
   display: flex;
   align-items: center;
@@ -90,7 +91,7 @@ body {
 
 /* Profile picture hover */
 .profile-picture {
-  width: 40px; 
+  width: 40px;
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
@@ -98,7 +99,7 @@ body {
 }
 
 .profile-container:hover .profile-picture {
-  border: 2px solid #e50914;  /* red border */
+  border: 2px solid #e50914; /* red border */
   box-shadow: 0 0 10px rgba(229, 9, 20, 0.6); /* glowing effect */
 }
 
@@ -150,7 +151,7 @@ body {
 
 /* Hover effect */
 .left-menu-icon:hover {
-  color: #e50914;   /* Netflix red highlight */
+  color: #e50914; /* Netflix red highlight */
   transform: scale(1.2); /* make it pop */
 }
 
@@ -211,7 +212,7 @@ body {
 .movie-list-item {
   margin-right: 30px;
   position: relative;
-  flex: 1 1 150px;  /* ✅ responsive sizing */
+  flex: 1 1 150px; /* ✅ responsive sizing */
   max-width: 200px; /* ✅ prevent items from being too big */
 }
 
@@ -238,8 +239,8 @@ body {
 
 /* Hover effect */
 .movie-list-item-button:hover {
-  background-color: #b20710;   /* darker red on hover */
-  transform: scale(1.1);       /* button grows a bit */
+  background-color: #b20710; /* darker red on hover */
+  transform: scale(1.1); /* button grows a bit */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* subtle shadow */
 }
 
@@ -302,76 +303,28 @@ body {
 
 .navbar-container.active {
   background-color: white;
-
   color: black;
 }
 
-.sidebar.active{
-    background-color: white;
+.sidebar.active {
+  background-color: white;
 }
 
-.left-menu-icon.active{
-    color: black;
+.left-menu-icon.active {
+  color: black;
 }
 
-.toggle.active{
-    background-color: black;
+.toggle.active {
+  background-color: black;
 }
 
-.toggle-ball.active{
-    background-color: white;
-    transform: translateX(-20px);
+.toggle-ball.active {
+  background-color: white;
+  transform: translateX(-20px);
 }
 
-@media only screen and (max-width: 940px){
-    .menu-container{
-        display: none;
-    }
-}
-
-/* ✅ Responsive styles */
-@media (max-width: 768px) {
-  .navbar-container {
-    flex-direction: column;
-    padding: 0 20px;
-  }
-  .sidebar {
-    display: none; /* hide sidebar on tablets/phones */
-  }
-  .featured-desc {
-    width: 100%;
-    font-size: 0.9rem;
-  }
-  .movie-list-item {
-    flex: 1 1 45%;  /* two per row */
-    max-width: 45%;
-  }
-  .movie-list-item-img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .movie-list-item {
-    flex: 1 1 100%;  /* one per row */
-    max-width: 100%;
-  }
-  .featured-title {
-    font-size: 1.2rem;
-    width: 100%;
-  }
-  .featured-desc {
-    font-size: 0.8rem;
-  }
-  .movie-list-item-title {
-    font-size: 20px;
-  }
-  .movie-list-item-desc {
-    font-size: 12px;
-  }
-  .movie-list-item-button {
-    font-size: 0.9rem;
-    padding: 6px 12px;
+@media only screen and (max-width: 940px) {
+  .menu-container {
+    display: none;
   }
 }
